@@ -1,0 +1,10 @@
+﻿@model EFCoreNewDatabase.Models.Blog
+
+<form method="post">
+    <label asp-for="@Model.Url">Enter Url</label>
+    <input asp-for="@Model.Url" placeholder="Blog Url" />
+    <button type="submit">Create</button>
+</form>
+
+<hr />
+<a asp-action="Index">Home</a>

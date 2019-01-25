@@ -16,5 +16,6 @@ namespace EFCoreNewDatabase.Controllers
         public HomeController(IBloggingRepository repo) => repository = repo;
 
         public IActionResult Index() => View(repository.Blogs.OrderBy(b => b.Url));
+        public IActionResult AddBlog() => View();
     }
 }
