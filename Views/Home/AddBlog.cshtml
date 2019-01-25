@@ -1,6 +1,7 @@
 ﻿@model EFCoreNewDatabase.Models.Blog
 
 <form method="post" asp-action="AddBlog">
+    <div asp-validation-summary="All"></div>
     <label asp-for="@Model.Url">Enter Url</label>
     <input asp-for="@Model.Url" placeholder="Blog Url" />
     <button type="submit">Create</button>

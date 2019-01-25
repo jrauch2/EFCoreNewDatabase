@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCoreNewDatabase.Models
 {
@@ -14,6 +15,7 @@ namespace EFCoreNewDatabase.Models
     public class Blog
     {
         public int BlogId { get; set; }
+        [Required]
         public string Url { get; set; }
 
         public ICollection<Post> Posts { get; set; }
