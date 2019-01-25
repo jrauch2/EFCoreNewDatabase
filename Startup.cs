@@ -43,7 +43,7 @@ namespace EFCoreNewDatabase
             app.UseMvcWithDefaultRoute();
             // TODO: remove after database has been seeded
             // DO NOT deploy to production without removing this line
-            SeedData.EnsurePopulated(app);
+            //SeedData.EnsurePopulated(app);
         }
     }
 }
