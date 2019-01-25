@@ -24,13 +24,17 @@ namespace EFCoreNewDatabase.Controllers
         {
             if (ModelState.IsValid)
             {
-                repository.AddBlog(model);
-                return RedirectToAction("Index");
+                if (repository.Blogs.Any(b => b.Url == model.Url))
+                {
+                    ModelState.AddModelError("", "Url must be unique");
+                }
+                else
+                {
+                    repository.AddBlog(model);
+                    return RedirectToAction("Index");
+                }
             }
-            else
-            {
-                return View();
-            }
+            return View();
         }
     }
 }
