@@ -36,5 +36,11 @@ namespace EFCoreNewDatabase.Controllers
             }
             return View();
         }
+
+        public IActionResult DeleteBlog(int id)
+        {
+            repository.DeleteBlog(repository.Blogs.FirstOrDefault(b => b.BlogId == id));
+            return RedirectToAction("Index");
+        }
     }
 }
