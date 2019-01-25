@@ -15,6 +15,6 @@ namespace EFCoreNewDatabase.Controllers
         private IBloggingRepository repository;
         public HomeController(IBloggingRepository repo) => repository = repo;
 
-        public IActionResult Index() => View(repository.Blogs);
+        public IActionResult Index() => View(repository.Blogs.OrderBy(b => b.Url));
     }
 }
