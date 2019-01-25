@@ -17,5 +17,13 @@ namespace EFCoreNewDatabase.Controllers
 
         public IActionResult Index() => View(repository.Blogs.OrderBy(b => b.Url));
         public IActionResult AddBlog() => View();
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AddBlog(Blog model)
+        {
+            repository.AddBlog(model);
+            return RedirectToAction("Index");
+        }
     }
 }

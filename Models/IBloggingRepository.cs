@@ -8,7 +8,8 @@ namespace EFCoreNewDatabase.Models
         IQueryable<Blog> Blogs { get; }
         IQueryable<Post> Posts { get; }
 
-        // TODO: AddBlog, UpdateBlog, DeleteBlog
+       void AddBlog(Blog blog);
+        // TODO: UpdateBlog, DeleteBlog
         // TODO: AddPost, UpdatePost, DeletePost
     }
 }
