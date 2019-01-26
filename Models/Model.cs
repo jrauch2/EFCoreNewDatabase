@@ -24,6 +24,7 @@ namespace EFCoreNewDatabase.Models
     public class Post
     {
         public int PostId { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Content { get; set; }
 
