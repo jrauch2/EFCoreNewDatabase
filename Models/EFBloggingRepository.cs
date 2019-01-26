@@ -34,5 +34,11 @@ namespace EFCoreNewDatabase.Models
             context.Add(post);
             context.SaveChanges();
         }
+
+        public void DeletePost(Post post)
+        {
+            context.Remove(post);
+            context.SaveChanges();
+        }
     }
 }
